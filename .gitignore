@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+openapi.yaml
+.env
+.*.env
+.env.*
+
+# Kubb generated sources
+src/gen/*
+src/gen
