@@ -161,7 +161,7 @@ const PROJECTS = [
       },
       {
         message:
-          "Both plants also underwent extensive crack and joint repairs, deck access ramp replacements, loading dock modifications, exterior stair replacements, and aeration grading replacement at Southport. The project was completed ahead of schedule and within budget, with less than 2% change orders, no safety incidents, and no damage to adjacent structures.",
+          "Both plants underwent extensive crack and joint repairs, deck access ramp replacements, loading dock modifications, exterior stair replacements, and aeration grading replacement at Southport. The project was completed ahead of schedule and within budget, with less than 2% change orders, no safety incidents, and no damage to adjacent structures.",
       },
     ],
   },

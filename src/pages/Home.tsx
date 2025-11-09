@@ -71,7 +71,7 @@ const Home: React.FC = () => {
                 style={{ transitionDelay: "50ms" }}
                 className="opacity-0 translate-y-6 scale-[.98] transition-all duration-700"
               >
-                <Chip>Family-Owned • Since 2016</Chip>
+                <Chip>Family-Owned • Since 2004</Chip>
                 <h1 className="mt-4 font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-White">
                   Quality engineering that
                   <span className="block bg-gradient-to-r from-White to-Orange bg-clip-text text-transparent">
