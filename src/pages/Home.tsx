@@ -117,7 +117,7 @@ const Home: React.FC = () => {
               data-reveal
               style={{ transitionDelay: "150ms" }}
             >
-              <div className="opacity-0 translate-y-6 scale-[.98] transition-all duration-700">
+              <div className="opacity-100 translate-y-6 scale-[.98] transition-all duration-700">
                 <div className="relative mx-auto w-full max-w-xl">
                   <img
                     src={HomeBuilding}
@@ -134,18 +134,21 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* angled divider */}
         <div className="h-12 bg-gradient-to-b from-Blue to-transparent -mb-6" />
       </section>
 
       {/* EXPERTISE CARDS */}
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <div className="text-center" data-reveal>
-          <h2 className="opacity-0 translate-y-6 scale-[.98] transition-all duration-700 font-serif text-3xl sm:text-4xl text-Black">
+        <div
+          className="text-center"
+          data-reveal
+          style={{ transitionDelay: "150ms" }}
+        >
+          <h2 className="opacity-100 translate-y-6 scale-[.98] transition-all duration-700 font-serif text-3xl sm:text-4xl text-Black">
             Our Expertise
           </h2>
-          <p className="mt-3 opacity-0 translate-y-6 scale-[.98] transition-all duration-700 delay-100 text-Black/70">
+          <p className="mt-3 opacity-100 translate-y-6 scale-[.98] transition-all duration-700 delay-100 text-Black/70">
             Quality & safety across every phase of your project.
           </p>
         </div>
@@ -215,7 +218,7 @@ const Home: React.FC = () => {
                 (t, i) => (
                   <div
                     key={t}
-                    className="opacity-0 translate-y-6 scale-[.98] transition-all duration-700 rounded-xl bg-White/10 p-4 text-White shadow-inner"
+                    className="opacity-100 translate-y-6 scale-[.98] transition-all duration-700 rounded-xl bg-White/10 p-4 text-White shadow-inner"
                     style={{ transitionDelay: `${200 + i * 80}ms` }}
                   >
                     <div className="text-sm uppercase tracking-wide text-White/70">
@@ -248,7 +251,7 @@ const Home: React.FC = () => {
             </div>
             <div className="flex sm:justify-end gap-3">
               <Link
-                to="/quote"
+                to="/contact"
                 className="rounded-xl bg-DarkBlue text-White px-5 py-3 font-medium hover:bg-Blue transition"
               >
                 Request a Quote

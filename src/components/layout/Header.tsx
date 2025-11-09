@@ -164,18 +164,11 @@ const Header = () => {
               <div className="px-6 pb-8 border-t border-Black/10 bg-White">
                 <div className="flex flex-col gap-3">
                   <Link
-                    to="/quote"
+                    to="/contact"
                     onClick={close}
                     className="inline-flex items-center justify-center rounded-xl bg-DarkBlue text-White px-5 py-3 font-medium hover:bg-Blue transition"
                   >
                     Request a Quote
-                  </Link>
-                  <Link
-                    to="/contact"
-                    onClick={close}
-                    className="inline-flex items-center justify-center rounded-xl border border-Black/20 px-5 py-3 font-medium text-Black hover:bg-Black/5 transition"
-                  >
-                    Contact Us
                   </Link>
                 </div>
                 <p className="mt-6 text-center text-sm text-Black/60">

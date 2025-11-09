@@ -47,9 +47,9 @@ const Contact: React.FC = () => {
             <p className="text-stone-700 leading-relaxed">
               Farah &amp; Sons, Inc.
               <br />
-              1234 Industrial Parkway
+              5333 Commerce Square Dr
               <br />
-              Indianapolis, IN 46202
+              Indianapolis, IN 46237
             </p>
           </div>
           <div className="ct-fade">
@@ -63,16 +63,7 @@ const Contact: React.FC = () => {
                 href="mailto:info@farahandsons.com"
                 className="text-blue-900 underline underline-offset-4"
               >
-                info@farahandsons.com
-              </a>
-              <br />
-              Careers:
-              <br />
-              <a
-                href="mailto:careers@farahandsons.com"
-                className="text-blue-900 underline underline-offset-4"
-              >
-                careers@farahandsons.com
+                jfarah@farahandsons.com
               </a>
             </p>
           </div>
