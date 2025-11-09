@@ -10,26 +10,32 @@ export const navigation = [
   {
     id: "1",
     title: "About",
-    url: "/About-us",
+    url: "/about",
     selected: "#About-us",
   },
   {
     id: "3",
     title: "Services",
-    url: "/Services",
+    url: "/services",
     selected: "#Services",
   },
   {
     id: "4",
     title: "Projects",
-    url: "/Projects",
+    url: "/projects",
     selected: "#Projects",
   },
   {
     id: "5",
     title: "Careers",
-    url: "/Careers",
+    url: "/careers",
     selected: "#Careers",
+  },
+  {
+    id: "6",
+    title: "Contact",
+    url: "/contact",
+    selected: "#Contact",
   },
   // {
   //   id: "6",

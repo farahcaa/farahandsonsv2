@@ -4,7 +4,13 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
-
+@theme {
+  --color-Blue: #00adef;
+  --color-Orange: #af5d63;
+  --color-DarkBlue: #1d2f6f;
+  --color-Black: #000000;
+  --color-White: #ffffff;
+}
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
