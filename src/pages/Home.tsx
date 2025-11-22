@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router";
-import { HomeBuilding, StreamPic } from "../assets";
+import { Layer1Pic1, StreamPic } from "../assets";
 
 /**
  * Home — Creative edition
@@ -120,7 +120,7 @@ const Home: React.FC = () => {
               <div className="opacity-100 translate-y-6 scale-[.98] transition-all duration-700">
                 <div className="relative mx-auto w-full max-w-xl">
                   <img
-                    src={HomeBuilding}
+                    src={Layer1Pic1}
                     alt="Active construction site"
                     className="w-full rounded-2xl shadow-2xl ring-1 ring-White/10 object-cover"
                   />

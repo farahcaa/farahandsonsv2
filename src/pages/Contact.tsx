@@ -1,6 +1,40 @@
-import React, { useEffect } from "react";
+import { sendEmail } from "@/lib/email";
+import React, { useEffect, useState } from "react";
 
 const Contact: React.FC = () => {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+    honeypot: "", // spam trap
+  });
+  const [loading, setLoading] = useState(false);
+  function handleChange(
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  }
+
+  const handleSubmit = async (e: SubmitEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const data = await sendEmail({ ...form });
+    if (data.status == "ok") {
+      alert("Success, We will get back to you as soon as possible");
+    } else {
+      alert(
+        "Error Failed to send, please send an email to jfarah@farahandsons.com"
+      );
+    }
+    setForm({
+      name: "",
+      email: "",
+      message: "",
+      honeypot: "",
+    });
+    setLoading(false);
+  };
   useEffect(() => {
     window.scrollTo(0, 0);
 
@@ -97,12 +131,18 @@ const Contact: React.FC = () => {
           </header>
 
           <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              alert("Form submitted (connect backend or email service next).");
-            }}
+            onSubmit={handleSubmit}
             className="ct-fade bg-white rounded-2xl shadow p-6 md:p-8 space-y-5"
           >
+            <input
+              type="text"
+              name="honeypot"
+              value={form.honeypot}
+              onChange={handleChange}
+              className="hidden"
+              tabIndex={-1}
+              autoComplete="off"
+            />
             <div>
               <label className="block text-sm font-medium text-stone-700 mb-1">
                 Name
@@ -110,6 +150,9 @@ const Contact: React.FC = () => {
               <input
                 type="text"
                 required
+                name="name"
+                value={form.name}
+                onChange={handleChange}
                 placeholder="Your name"
                 className="w-full border border-stone-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-900"
               />
@@ -120,6 +163,9 @@ const Contact: React.FC = () => {
               </label>
               <input
                 type="email"
+                name="email"
+                onChange={handleChange}
+                value={form.email}
                 required
                 placeholder="you@example.com"
                 className="w-full border border-stone-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-900"
@@ -131,6 +177,9 @@ const Contact: React.FC = () => {
               </label>
               <textarea
                 required
+                name="message"
+                value={form.message}
+                onChange={handleChange}
                 placeholder="Tell us more..."
                 rows={5}
                 className="w-full border border-stone-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-900 resize-none"
@@ -141,7 +190,7 @@ const Contact: React.FC = () => {
                 type="submit"
                 className="rounded-xl bg-blue-900 text-white px-6 py-3 font-medium shadow hover:shadow-md transition"
               >
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </button>
             </div>
           </form>
