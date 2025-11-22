@@ -33,7 +33,7 @@ Message:
 ${message}
     `.trim(),
     bodyHtml: `
-      <h2>New seller lead from Farah Property website</h2>
+      <h2>New Inquiry from farahandsons</h2>
       <p><strong>Name:</strong> ${name || "N/A"}</p>
       <p><strong>Email:</strong> ${email || "N/A"}</p>
       <p><strong>Message:</strong></p>
