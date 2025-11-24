@@ -17,6 +17,9 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (e: SubmitEvent) => {
     e.preventDefault();
+
+    if (form.honeypot) return;
+
     setLoading(true);
 
     const data = await sendEmail({ ...form });
